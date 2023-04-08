@@ -41,9 +41,10 @@ const BlogContainer = () => {
                 <input type="text" name="tag" value={tag} id="" placeholder='Search by Tag' onChange={(e) => setTag(e.target.value)} />
                 <button onClick={filterByTag}>search</button>
             </div>
+            <h1>Blogs</h1>
             <div className="blogs">
                 {
-                    blogs ?
+                    blogs.length > 0?
                         blogs.map((blog) => (
                             <Blog blog={blog} key={blog.id} />
                         ))
