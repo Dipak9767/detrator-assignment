@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blogContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filters {
+  width: 50%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.filters button{
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: crimson;
+  color: white;
+  font-size: 15px;
+  border-radius: 25px;
+}
+.filters input {
+  padding: 1rem;
+  color: black;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-radius: 25px;
+  width: 70%;
+  outline: none;
+}
+
+.blogs {
+  width: 90%;
+  height: 85vh;
+  display: flex;
+  padding: 15px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  overflow: auto;
+}
+
+.blogCard {
+  width: 95%;
+  height: auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-.App-link {
-  color: #61dafb;
+.blogCard .tags span{
+  margin: 0 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blogCard span{
+  font-weight: bold;
 }
